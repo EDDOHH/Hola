@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi opinión sobre ti</title>
+</head>
+<body>
+    <h1>Yo opino que eres...</h1>
+    <button id="generate-btn">Ver qué opina Edgar de mi</button>
+    <p id="random-word" style= "font-size: 90px;"></p>
+
+    <script>
+        const words = ["Excelente", "Increíble", "Fascinante", "Asombroso", "Impresionante"];
+
+        document.getElementById("generate-btn").addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            const randomWord = words[randomIndex];
+            document.getElementById("random-word").textContent = randomWord;
+        });
+    </script>
+</body>
+</html>
